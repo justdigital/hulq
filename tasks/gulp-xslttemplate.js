@@ -7,12 +7,9 @@ var extend  = require('util')._extend
 var PluginError = gutil.PluginError;
 
 var defaultOptions = {
-  destFolder: "build",
-  destFilename: "template.xslt",
-  xsltFolder: "xslt",
-  partials: {},
-  partialsFolder: "partials",
-  partialsExtension: "xslt"
+  destFilename: "output.xslt",
+  destPath: './xslt/build/',
+  replaces: {},
 };
  
 var xsltTemplatePlugin = function(options) {
@@ -28,14 +25,20 @@ var xsltTemplatePlugin = function(options) {
 
     var templateContent = fs.readFileSync(file.path, "utf8");
 
-    for (var name in options.partials){
-      var _partial = options.partials[name];
-      var _path = path.resolve(options.xsltFolder + "/" + options.partialsFolder + "/" + name + "." + options.partialsExtension);
-      var _partialContent = fs.readFileSync(_path, "utf8");
-      templateContent = templateContent.replace("{{" + name + "}}", _partialContent);
+    /*
+     * Template generating
+     */
+    for (var name in options.replaces){
+      var _partial = options.replaces[name];
+      var _path = _partial.path || "";
+      var _filename = _partial.filename || name + '.' + _partial.type;
+
+      _path = path.resolve(_path + "/" + _filename);
+      var _content = fs.readFileSync(_path, "utf8");
+      templateContent = templateContent.replace("{{" + name + "}}", _content.trim());
     }
 
-    var _destPath = path.resolve(options.xsltFolder + "/" + options.destFolder + "/" + options.destFilename);
+    var _destPath = path.resolve(options.destPath + "/" + options.destFilename);
     fs.writeFile(_destPath, templateContent, function(err) {
       cb(err, file);
     });

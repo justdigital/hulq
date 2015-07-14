@@ -1,14 +1,14 @@
 'use strict';
 
 // Dependencies
-var gulp          = require('gulp');
-var xslttemplate  = require('./tasks/gulp-xslttemplate.js');
-var sass          = require('gulp-sass');
-var concat        = require('gulp-concat');
-var jslint        = require('gulp-jslint');
-var sourcemaps    = require('gulp-sourcemaps');
-var watch         = require('gulp-watch');
-var batch         = require('gulp-batch');
+var gulp              = require('gulp');
+var xslttemplate      = require('./tasks/gulp-xslttemplate.js');
+var sass              = require('gulp-sass');
+var concat            = require('gulp-concat');
+var jslint            = require('gulp-jslint');
+var sourcemaps        = require('gulp-sourcemaps');
+var watch             = require('gulp-watch');
+var batch             = require('gulp-batch');
 
 /*
   Config
@@ -65,12 +65,13 @@ gulp.task('xslt', function() {
           filename: "app.css",
           path: cssBuildPath,
         },
-        header: {
+        advanced_search: {
           type: "xslt",
           path: xsltPartialsPath
         },
       }
     }))
+    .pipe(gulp.dest(xsltBuildPath));
 });
 
 // Watch

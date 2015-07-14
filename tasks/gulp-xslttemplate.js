@@ -7,7 +7,6 @@ var extend  = require('util')._extend
 var PluginError = gutil.PluginError;
 
 var defaultOptions = {
-  destFilename: "output.xslt",
   destPath: './xslt/build/',
   replaces: {},
 };
@@ -38,11 +37,8 @@ var xsltTemplatePlugin = function(options) {
       templateContent = templateContent.replace("{{" + name + "}}", _content.trim());
     }
 
-    var _destPath = path.resolve(options.destPath + "/" + options.destFilename);
-    fs.writeFile(_destPath, templateContent, function(err) {
-      cb(err, file);
-    });
-
+    file.contents = new Buffer(String(templateContent));
+    return cb(null, file);
   });
 };
  

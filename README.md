@@ -38,20 +38,20 @@ Altere o arquivo gulpfile.js para contemplar todas as suas partials criadas (na 
 ```
 #!javascript
 
-      replaces: {
-        jsmin: {
-          filename: "app.js",
-          path: jsBuildPath,
-        },  
-        cssmin: {
-          filename: "app.css",
-          path: cssBuildPath,
-        },  
-        advanced_search: {
-          type: "xslt",
-          path: xsltPartialsPath
-        },  
-      } 
+replaces: {
+  jsmin: {
+    filename: "app.js",
+    path: jsBuildPath,
+  },  
+  cssmin: {
+    filename: "app.css",
+    path: cssBuildPath,
+  },  
+  advanced_search: {
+    type: "xslt",
+    path: xsltPartialsPath
+  },  
+} 
 ```
 
 *(Para mais informações sobre o build, consulte a documentação do plugin **gulp-xslttemplate**)*

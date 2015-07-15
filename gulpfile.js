@@ -74,6 +74,8 @@ gulp.task('xslt', function() {
     .pipe(gulp.dest(xsltBuildPath));
 });
 
+gulp.task('default', ['js', 'css', 'xslt']);
+
 // Watch
 gulp.task('watch', function () {
   watch(cssPath + '/**/*.scss', batch(function (done) {

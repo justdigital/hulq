@@ -1,11 +1,9 @@
 #!/bin/bash
 case "$1" in
   "smash" )
-    cd bin
     node ./frontend-breaker.js ;;
   "destroy" )
-    cd bin
     ./clean.sh ;;
-  "gamma" )
+  "build" )
     gulp default ;;
 esac

@@ -2,7 +2,7 @@
 
 HULQ - Framework para desenvolvimento XSLT
 
-## Como fazer? ##
+## Instalação / Uso ##
 
 Clone o repositório
 

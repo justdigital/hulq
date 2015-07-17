@@ -7,30 +7,22 @@ HULQ - Simple framework for XSLT development
 Clone the repo
 
 ```
-#!bash
-
 $ git clone git@github.com:justdigital/hulq.git
 ```
 
 Move your XSLT template to the project folder
 
 ```
-#!bash
-
 $ mv PATH/TO/YOUR/template.xslt resources/template.xslt
 ```
 Break your template in many parts:
 
 ```
-#!bash
-
 $ ./hulq smash
 ```
 Move the generated files to the XSLT workspace
 
 ```
-#!bash
-
 $ mv generated/* xslt/
 ```
 

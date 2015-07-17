@@ -1,5 +1,10 @@
 var fs      = require("fs");
-var templateContent = fs.readFileSync("./res/default_frontend_stylesheet.en.xslt", "utf8");
+var args = process.argv.slice(2);
+if (!args[0]){
+  console.log("Please input a filename");
+  return;
+}
+var templateContent = fs.readFileSync("./resources/" + args[0] + ".xslt", "utf8");
 
 var createFile = function(name, content){
   fs.writeFile("./generated/" + name + ".xslt", content, function(err) {

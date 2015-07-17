@@ -6,9 +6,23 @@ var fs      = require("fs");
 var extend  = require('util')._extend
 var PluginError = gutil.PluginError;
 
+var DEBUG = true;
+
+var debugOutput = function(msg){
+  if (DEBUG)
+    console.log(msg);
+};
+
 var defaultOptions = {
-  destPath: './xslt/build/',
+  destPath:     './xslt/build/',
+  partialsPath: './xslt/partials/',
   replaces: {},
+};
+
+var fileContentsToTemplateSync = function(templateContent, filename, templateVariable){
+  var _content = fs.readFileSync(filename, "utf8");
+  templateContent = templateContent.replace("{{" + templateVariable + "}}", _content.trim());
+  return templateContent;
 };
  
 var xsltTemplatePlugin = function(options) {
@@ -25,20 +39,32 @@ var xsltTemplatePlugin = function(options) {
     var templateContent = fs.readFileSync(file.path, "utf8");
 
     /*
-     * Template generating
+     * Template substitution from options.replaces
      */
     for (var name in options.replaces){
       var _partial = options.replaces[name];
       var _path = _partial.path || "";
       var _filename = _partial.filename || name + '.' + _partial.type;
-
       _path = path.resolve(_path + "/" + _filename);
-      var _content = fs.readFileSync(_path, "utf8");
-      templateContent = templateContent.replace("{{" + name + "}}", _content.trim());
+
+      templateContent = fileContentsToTemplateSync(templateContent, _path, name);
     }
 
-    file.contents = new Buffer(String(templateContent));
-    return cb(null, file);
+    /*
+     * Template substitution from partials
+     */
+    fs.readdir(options.partialsPath,function(err,files){
+      if(err) throw err;
+      files.forEach(function(file){
+        // do something with each file HERE!
+        var _path = path.resolve(options.partialsPath + "/" + file);
+        var name  = file.replace(".xslt", "");
+        debugOutput("Injecting file " + _path + " into variable " + name);
+        templateContent = fileContentsToTemplateSync(templateContent, _path, name);
+      });
+      file.contents = new Buffer(String(templateContent));
+      return cb(null, file);
+    });
   });
 };
  

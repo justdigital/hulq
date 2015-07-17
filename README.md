@@ -20,10 +20,10 @@ Break your template in many parts:
 ```
 $ ./hulq smash
 ```
-Move the generated files to the XSLT workspace
+Copy the generated files to the XSLT workspace
 
 ```
-$ mv generated/* xslt/
+$ cp -R generated/* xslt/
 ```
 
 Now it is your turn: You can edit the xslt files (workspace/**/*.xslt)

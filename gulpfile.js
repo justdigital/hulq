@@ -56,6 +56,7 @@ gulp.task('xslt', function() {
   gulp.src('xslt/template.xslt')
     .pipe(xslttemplate({
       destPath: xsltBuildPath,
+      partialsPath: xsltPartialsPath,
       replaces: {
         jsmin: {
           filename: "app.js",

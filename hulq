@@ -1,9 +1,0 @@
-#!/bin/bash
-case "$1" in
-  "smash" )
-    node ./frontend-breaker.js ;;
-  "destroy" )
-    ./clean.sh ;;
-  "build" )
-    gulp default ;;
-esac

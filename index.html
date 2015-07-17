@@ -13,7 +13,7 @@
 <nav class="navbar navbar-default navbar-fixed-top">
   <div class="container-fluid">
     <ul class="nav navbar-nav pull-right">
-      <li><a href="#">Documentation</a></li>
+      <li><a href="https://github.com/justdigital/hulq/#readme">Documentation</a></li>
     </ul>
   </div>
 </nav>
@@ -31,11 +31,37 @@
     <h2>Get started easily</h2>
     <div class="well">
       <ol>
-        <li class="getting-started-step">git clone https://google.com/hulq.git your_project</li>
-        <li class="getting-started-step">cd your_project</li>
-        <li class="getting-started-step">mv path/to/your/template.xslt res/template.xslt</li>
-        <li class="getting-started-step">sudo chmod +x ./hulq</li>
-        <li class="getting-started-step">./hulq smash</li>
+        <li class="getting-started-step">
+          <span class="get-started-command">git clone https://google.com/hulq.git your_project</span>
+          <span class="get-started-comment">#Clone the repo and choose a name</span>
+        </li>
+        <li class="getting-started-step">
+          <span class="get-started-command">cd your_project</span>
+          <span class="get-started-comment">#Go into your created folder</span>
+        </li>
+        <li class="getting-started-step">
+          <span class="get-started-command">mv path/to/your/template.xslt res/template.xslt</span>
+          <span class="get-started-comment">#Move your XSLT template to the project folder</span>
+        </li>
+        <li class="getting-started-step">
+          <span class="get-started-command">sudo chmod +x ./hulq</span>
+          <span class="get-started-comment">#Give exec permission on the hulq file</span>
+        </li>
+        <li class="getting-started-step">
+          <span class="get-started-command">./hulq smash</span>
+          <span class="get-started-comment">#Break your template in many</span>
+        </li>
+        <li class="getting-started-step">
+          <span class="get-started-command">mv generated/* xslt/*</span>
+          <span class="get-started-comment">#Move the generated files to the XSLT workspace</span>
+        </li>
+        <li class="getting-started-step">
+          <span class="get-started-comment">#Now it is your turn: You can edit the xslt files (workspace/**/*.xslt)</span>
+        </li>
+        <li class="getting-started-step">
+          <span class="get-started-command">./hulq recover</span>
+          <span class="get-started-comment">#Create the brand new xslt file with everything together</span>
+        </li>
       </ol>
     </div>
   </div>

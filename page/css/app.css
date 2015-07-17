@@ -16,6 +16,7 @@ body {
 .navbar{
   background-color: #300060;
   border-color:  #300060;
+  box-shadow: 0px 0px 10px 7px rgba(0,0,0,0.6);
 }
 
 .navbar .navbar-nav>li>a{
@@ -31,7 +32,6 @@ body {
 .jumbotron{
   background-color: #15C215;
   box-shadow:
-    inset 0px 11px 8px -10px black,
     inset 0px -11px 8px -10px black; 
 }
 
@@ -67,6 +67,14 @@ body {
 }
 .section .well li:before{
   content: '$ ';
+}
+.section .well li .get-started-command{
+  border: 1px solid white;
+  padding: 2px;
+}
+.section .well li .get-started-comment{
+  font-color: #F0F0F0;
+  font-style: italic;
 }
 
 h2{

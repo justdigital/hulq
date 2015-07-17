@@ -40,6 +40,7 @@ body {
   color: white;
   margin-top: 0;
   text-shadow: 0px 0px 7px rgba(0,0,0,0.5);
+  text-align: center;
 }
 .jumbotron h1 small{
   color: #772F9B;
@@ -55,6 +56,7 @@ body {
 .jumbotron p{
   color: white;
   text-shadow: 0px 0px 4px rgba(0,0,0,0.5);
+  text-align: center;
 }
 
 .section .well{

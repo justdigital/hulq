@@ -3,3 +3,6 @@ node_modules/
 *.swo
 **/*.swp
 **/*.swo
+xslt/*
+generated/*
+assets/*

@@ -33,8 +33,6 @@ Now it is your turn: You can edit the xslt files (workspace/**/*.xslt)
 You can change this file to configure how your output will be generated
 
 ```
-#!javascript
-
 replaces: {
   jsmin: {
     filename: "app.js",

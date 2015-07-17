@@ -1,39 +1,44 @@
 # README #
 
-HULQ - Framework para desenvolvimento XSLT
+HULQ - Simple framework for XSLT development
 
-## Instalação / Uso ##
+## Installation / Use ##
 
-Clone o repositório
-
-```
-#!bash
-
-$ git clone git@bitbucket.org:code_just/hulq.git
-```
-
-Copie seu arquivo xslt para a pasta resources
+Clone the repo
 
 ```
 #!bash
 
-$ mv PATH/PARA/SEU/arquivo.xslt resources/
+$ git clone git@github.com:justdigital/hulq.git
 ```
-Quebre seu arquivo o XSLT em partes:
+
+Move your XSLT template to the project folder
+
+```
+#!bash
+
+$ mv PATH/TO/YOUR/template.xslt resources/template.xslt
+```
+Break your template in many parts:
 
 ```
 #!bash
 
 $ ./hulq smash
 ```
-Mova seu seus arquivos gerados para a pasta de trabalho
+Move the generated files to the XSLT workspace
 
 ```
 #!bash
 
 $ mv generated/* xslt/
 ```
-Altere o arquivo gulpfile.js para contemplar todas as suas partials criadas (na pasta **partials** dentro de **xslt** como no exemplo:
+
+Now it is your turn: You can edit the xslt files (workspace/**/*.xslt)
+
+## The Gulpfile ##
+
+You can change this file to configure how your output will be generated
 
 ```
 #!javascript
@@ -46,19 +51,20 @@ replaces: {
   cssmin: {
     filename: "app.css",
     path: cssBuildPath,
-  },  
-  advanced_search: {
-    type: "xslt",
-    path: xsltPartialsPath
-  },  
+  }
 } 
 ```
 
-*(Para mais informações sobre o build, consulte a documentação do plugin **gulp-xslttemplate**)*
+TODO Create a documentation for our gulp plugin:  **gulp-xslttemplate**
 
-Reconstruir o XSLT com as alterações feitas nas partials:
+Create the brand new xslt file with everything together:
 ```
 #!bash
 
-$ ./hulq build
+$ ./hulq recover
 ```
+
+
+## Contributing ##
+
+TODO

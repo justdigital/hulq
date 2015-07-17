@@ -4,6 +4,6 @@ case "$1" in
     node ./frontend-breaker.js ;;
   "destroy" )
     ./clean.sh ;;
-  "build" )
+  "recover" )
     gulp default ;;
 esac

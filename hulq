@@ -1,9 +1,9 @@
 #!/bin/bash
 case "$1" in
   "smash" )
-    node ./frontend-breaker.js default_frontend_stylesheet;;
+    node ./smash.js default_frontend_stylesheet;;
   "destroy" )
-    ./clean.sh ;;
+    ./destroy.sh ;;
   "recover" )
     gulp default ;;
 esac

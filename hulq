@@ -2,6 +2,11 @@
 case "$1" in
   "smash" )
     node ./smash.js default_frontend_stylesheet;;
+# TODO
+# "deploy" )
+#   node ./deploy.js default_frontend_stylesheet;;
+  "prepare" )
+    ./prepare.sh ;;
   "destroy" )
     ./destroy.sh ;;
   "recover" )

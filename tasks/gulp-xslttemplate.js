@@ -5,6 +5,7 @@ var path    = require('path');
 var fs      = require("fs");
 var extend  = require('util')._extend
 var PluginError = gutil.PluginError;
+var cfg     = require("../config.js");
 
 var DEBUG = true;
 
@@ -14,8 +15,8 @@ var debugOutput = function(msg){
 };
 
 var defaultOptions = {
-  destPath:     './xslt/build/',
-  partialsPath: './xslt/partials/',
+  destPath:     cfg.xsltBuildPath,
+  partialsPath: cfg.xsltPartialsPath,
   replaces: {},
 };
 

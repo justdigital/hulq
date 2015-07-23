@@ -20,7 +20,7 @@ fs.readFile(resourceFilePath, {encoding: "utf8"}, function(err, templateContent)
   }
   templateContent = templateContent.replace(/<xsl:template\s+name="(.*)">((?:[\s\S])*?)<\/xsl:template>/g, function(match, p1, p2, offset, string){
     createFile("partials/" + p1.toLowerCase(), p2.trim());
-    return match.replace(p2, "{{" + p1 + "}}");
+    return match.replace(p2, "{{" + p1.toLowerCase() + "}}");
   });
 
   createFile("template", templateContent);

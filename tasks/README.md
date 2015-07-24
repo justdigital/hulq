@@ -1,15 +1,11 @@
-# README #
-
-Gulp XSLTTemplate
-
-## Documentation ##
+# XSLT Template Documentation #
 
 If you want to inject partials to a template just call the xslttemplate() function.
 
-### Available options ###
-- replaces: Besides the files loaded in the partials folder, you can add more replace rules in the options like this:
+## Available options ##
+- *partialsPath (required)*: The path to the partials folder. gulp-xslttemplate will automatically inject the partial files on the template where their variable is. The partial variable on the template is the file name by default. Example: The './partials/advanced_search.xslt' will be represented by the {{advanced_search}} variable.
 
-- partialsPath (required): The path to the partials folder. gulp-xslttemplate will automatically inject the partial files on the template where their variable is. The partial variable on the template is the file name by default. Example: The './partials/advanced_search.xslt' will be represented by the {{advanced_search}} variable.
+- *replaces*: Besides the files loaded in the partials folder, you can add more replace rules in the options like this:
 
 ```
 var options = {
@@ -39,7 +35,7 @@ var options = {
 xssttemplate(options);
 ```
 
-### Example implementation ###
+## Example implementation ##
 _gulpfile.js_
 ```
 var xslttemplate = require('./tasks/gulp-xslttemplate.js');
@@ -56,9 +52,11 @@ gulp.task('xslt', function() {
         cssmin: {
           filename: "app.css",
           path: './assets/css',
-        },
+        }
       }
     }))
     .pipe(gulp.dest('./xslt/build/template.xslt'));
 });
+
+gulp.task('default', ['xslt']);
 ```

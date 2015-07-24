@@ -30,7 +30,8 @@ Now it is your turn: You can edit the xslt files (workspace/**/*.xslt)
 
 ## The Gulpfile ##
 
-You can change this file to configure how your output will be generated
+You can change this file to configure how your output will be generated.
+The gulp-xslttemplate documentation is available [here](tasks/README.md)
 
 ```
 replaces: {

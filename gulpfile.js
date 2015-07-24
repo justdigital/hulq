@@ -41,7 +41,6 @@ gulp.task('js', function(){
 gulp.task('xslt', function() {
   gulp.src('xslt/template.xslt')
     .pipe(xslttemplate({
-      destPath: cfg.xsltBuildPath,
       partialsPath: cfg.xsltPartialsPath,
       replaces: {
         jsmin: {

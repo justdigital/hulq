@@ -45,8 +45,6 @@ replaces: {
 } 
 ```
 
-TODO Create a documentation for our gulp plugin:  **gulp-xslttemplate**
-
 Create the brand new xslt file with everything together:
 ```
 #!bash

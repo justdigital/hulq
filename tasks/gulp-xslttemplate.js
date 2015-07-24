@@ -5,8 +5,6 @@ var path    = require('path');
 var fs      = require("fs");
 var extend  = require('util')._extend
 var PluginError = gutil.PluginError;
-var cfg     = require("../config.js");
-
 var DEBUG = true;
 
 var debugOutput = function(msg){
@@ -15,8 +13,6 @@ var debugOutput = function(msg){
 };
 
 var defaultOptions = {
-  destPath:     cfg.xsltBuildPath,
-  partialsPath: cfg.xsltPartialsPath,
   replaces: {},
 };
 
@@ -28,8 +24,10 @@ var fileContentsToTemplateSync = function(templateContent, filename, templateVar
  
 var xsltTemplatePlugin = function(options) {
   options = extend(defaultOptions, options);
-
   return map(function(file, cb) {
+    if (!options.partialsPath) {
+      throw new PluginError('gulp-xslttemplate', 'Missing partialsPath option for gulp-xslttempalte');
+    }
     var error;
     var fileName;
 

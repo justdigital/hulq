@@ -48,8 +48,6 @@ replaces: {
 
 Create the brand new xslt file with everything together:
 ```
-#!bash
-
 $ ./hulq recover
 ```
 

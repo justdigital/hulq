@@ -31,6 +31,17 @@ $ ./hulq prepare
 
 Now it is your turn: You can edit the xslt files (workspace/**/*.xslt)
 
+## HulQ Commands ##
+The core HulQ commands are:
+1. smash
+2. prepare
+3. recover
+4. lookup
+5. destroy
+6. help
+
+You can see their description by using ./hulq help
+
 ## The Gulpfile ##
 
 You can change this file to configure how your output will be generated.

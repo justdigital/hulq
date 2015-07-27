@@ -1,16 +1,18 @@
 #!/bin/bash
 case "$1" in
   "smash" )
-    node ./smash.js default_frontend_stylesheet;;
-  "lookup" )
-    node ./lookup.js $2;;
-# TODO
-# "deploy" )
-#   node ./deploy.js default_frontend_stylesheet;;
+    node ./smash.js $2;;
   "prepare" )
     ./prepare.sh ;;
   "destroy" )
     ./destroy.sh ;;
+  "lookup" )
+    node ./lookup.js $2;;
   "recover" )
     gulp default ;;
+  "help" )
+    node ./help.js ;;
+# TODO
+# "deploy" )
+#   node ./deploy.js default_frontend_stylesheet;;
 esac

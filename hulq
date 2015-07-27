@@ -2,6 +2,8 @@
 case "$1" in
   "smash" )
     node ./smash.js default_frontend_stylesheet;;
+  "lookup" )
+    node ./lookup.js $2;;
 # TODO
 # "deploy" )
 #   node ./deploy.js default_frontend_stylesheet;;

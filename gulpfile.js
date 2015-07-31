@@ -3,6 +3,7 @@
 // Dependencies
 var gulp              = require('gulp');
 var xslttemplate      = require('./tasks/gulp-xslttemplate.js');
+var gcallback         = require('gulp-callback')
 var sass              = require('gulp-sass');
 var concat            = require('gulp-concat');
 var jslint            = require('gulp-jslint');
@@ -13,18 +14,19 @@ var cfg               = require('./config.js');
 
 
 // CSS Tasks
-gulp.task('css', function () {
+gulp.task('css', function (cb) {
   gulp.src(cfg.cssPath + '/**/*.scss')
-    .pipe(sourcemaps.init())
-    .pipe(sass({
-      outputStyle: 'compressed'
-    }).on('error', sass.logError))
-    .pipe(sourcemaps.write())
-    .pipe(gulp.dest('./assets/build/css'));
+  .pipe(sourcemaps.init())
+  .pipe(sass({
+    outputStyle: 'compressed'
+  }).on('error', sass.logError))
+  .pipe(sourcemaps.write())
+  .pipe(gulp.dest('./assets/build/css'))
+  .pipe(gcallback(cb));
 });
 
 // JS Tasks
-gulp.task('js', function(){
+gulp.task('js', function(cb){
   gulp.src([
     //You can add important files first like libraries so they'll be on the beginning of the main file
     cfg.jsPath + "/header.js",  //(Unlimited) Important stuff first
@@ -34,33 +36,30 @@ gulp.task('js', function(){
   .pipe(jslint({
     browser: true,
   }))
-  .pipe(gulp.dest(cfg.jsBuildPath));
+  .pipe(gulp.dest(cfg.jsBuildPath))
+  .pipe(gcallback(cb));
 });
 
 // XSLT Building
-gulp.task('xslt', function() {
+gulp.task('xslt', ['js', 'css'], function() {
   gulp.src('xslt/template.xslt')
-    .pipe(xslttemplate({
-      partialsPath: cfg.xsltPartialsPath,
-      replaces: {
-        jsmin: {
-          filename: "app.js",
-          path: cfg.jsBuildPath,
-        },
-        cssmin: {
-          filename: "app.css",
-          path: cfg.cssBuildPath,
-        },
-        advanced_search: {
-          type: "xslt",
-          path: cfg.xsltPartialsPath
-        },
-      }
-    }))
-    .pipe(gulp.dest(cfg.xsltBuildPath));
+  .pipe(xslttemplate({
+    partialsPath: cfg.xsltPartialsPath,
+    replaces: {
+      jsmin: {
+        filename: "app.js",
+        path: cfg.jsBuildPath,
+      },
+      cssmin: {
+        filename: "app.css",
+        path: cfg.cssBuildPath,
+      },
+    }
+  }))
+  .pipe(gulp.dest(cfg.xsltBuildPath));
 });
 
-gulp.task('default', ['js', 'css', 'xslt']);
+gulp.task('default', ['xslt']); //Default runs only xslt because it already depends on CSS and JS tasks
 
 // Watch
 gulp.task('watch', function () {

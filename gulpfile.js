@@ -6,7 +6,7 @@ var xslttemplate      = require('./tasks/gulp-xslttemplate.js');
 var gcallback         = require('gulp-callback')
 var sass              = require('gulp-sass');
 var concat            = require('gulp-concat');
-var jslint            = require('gulp-jslint');
+var jshint            = require('gulp-jshint');
 var sourcemaps        = require('gulp-sourcemaps');
 var watch             = require('gulp-watch');
 var batch             = require('gulp-batch');
@@ -34,7 +34,7 @@ gulp.task('js', function(cb){
   ])
 
   //You can ignore js lint on library files using /*ignore jslint start */ and /*ignore jslint end */
-  .pipe(jslint({
+  .pipe(jshint({
     browser: true,
   }))
 

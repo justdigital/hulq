@@ -1,1 +1,1 @@
-window.alert("footer9");
+window.alert("footer");

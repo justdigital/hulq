@@ -2,6 +2,14 @@
 
 HULQ - Simple framework for XSLT development
 
+## Prerequisites ##
+
+Before you start, make sure you have these things installed:
+
+1. nodejs
+2. npm
+2. gulp (sudo npm install gulp -g)
+
 ## Installation / Use ##
 
 Set-up repo

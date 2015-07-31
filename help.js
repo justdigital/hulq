@@ -11,7 +11,7 @@ var helpTable = {
     {
       size:30,                  // Col size
       colorFunc: chalk.bold.red, //Col color
-      paddingRight: 3,
+      paddingRight: 3,          // Amount of spaces to the next table
     },
     {
       size:70,

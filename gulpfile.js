@@ -21,7 +21,7 @@ gulp.task('css', function (cb) {
     outputStyle: 'compressed'
   }).on('error', sass.logError))
   .pipe(sourcemaps.write())
-  .pipe(gulp.dest('./assets/build/css'))
+  .pipe(gulp.dest(cfg.cssBuildPath))
   .pipe(gcallback(cb));
 });
 
@@ -32,10 +32,13 @@ gulp.task('js', function(cb){
     cfg.jsPath + "/header.js",  //(Unlimited) Important stuff first
     cfg.jsPath + '/**/*.js'     //All the other files
   ])
-  .pipe(concat('app.js'))
+
+  //You can ignore js lint on library files using /*ignore jslint start */ and /*ignore jslint end */
   .pipe(jslint({
     browser: true,
   }))
+
+  .pipe(concat('app.js'))
   .pipe(gulp.dest(cfg.jsBuildPath))
   .pipe(gcallback(cb));
 });

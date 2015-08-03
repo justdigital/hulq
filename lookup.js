@@ -28,17 +28,18 @@ function addMatch(file, line, lineNum){
 wrench.readdirRecursive(cfg.xsltPath, function(error, curFiles) {
   for (var f in curFiles){
     var file = curFiles[f];
-    if (file.match(".xslt")){
-      var lineNum = 0;
-      new lazy(fs.createReadStream(cfg.xsltPath + "/" + file))
-        .lines
-        .forEach(function(line){
-          if (line.toString().match(term)){
-            addMatch(file, line, lineNum);
+    if (file.match(".xslt") && !file.match("build")){
+      (function(lineNum, file){
+        new lazy(fs.createReadStream(cfg.xsltPath + "/" + file))
+          .lines
+          .forEach(function(line){
+            if (line.toString().match(term)){
+              addMatch(file, line, lineNum);
+            }
+            lineNum ++;
           }
-          lineNum ++;
-        }
-      );
+        );
+      })(0, file);
     }
   }
 });

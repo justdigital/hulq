@@ -66,7 +66,7 @@ gulp.task('default', ['xslt']); //Default runs only xslt because it already depe
 
 // Watch
 gulp.task('watch', function () {
-  watch([cfg.xsltPartialsPath, cfg.jsPath + '/**/*.js', cfg.cssPath + '/**/*.scss'], batch(function (done) {
+  watch([cfg.xsltPath + "/*.xslt", cfg.xsltPartialsPath + "/**/*.xslt", cfg.jsPath + '/**/*.js', cfg.cssPath + '/**/*.scss'], batch(function (done) {
     gulp.start('xslt');
     done();
   }));

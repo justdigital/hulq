@@ -44,6 +44,7 @@ The core HulQ commands are:
 1. smash
 2. prepare
 3. recover
+3. watch
 4. lookup
 5. destroy
 6. help

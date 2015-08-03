@@ -10,6 +10,8 @@ case "$1" in
     node ./lookup.js $2;;
   "recover" )
     gulp default ;;
+  "watch" )
+    gulp watch ;;
   "help" )
     node ./help.js ;;
 # TODO

@@ -39,7 +39,7 @@ wrench.readdirRecursive(cfg.xsltPath, function(error, curFiles) {
             lineNum ++;
           }
         );
-      })(0, file);
+      })(1, file);
     }
   }
 });

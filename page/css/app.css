@@ -1,21 +1,23 @@
 /*
  * HulQ Color Palette
- *
- * light green: #5BD30B
- * green:       #15C215
- * dark green:  #0A5800
- * purple:      #772F9B
- * dark purple: #300060
  */
+
+:root {
+  --lightGreen:   #5BD30B;
+  --normalGreen:  #15C215;
+  --darkGreen:    #0A5800;
+  --normalPurple: #772F9B;
+  --darkPurple:   #300060;
+}
 
 body {
   padding-top: 50px;
-  background-color: #300060;
+  background-color: var(--darkPurple);
 }
 
 .navbar{
-  background-color: #300060;
-  border-color:  #300060;
+  background-color: var(--darkPurple);
+  border-color:  var(--darkPurple);
 }
 
 .navbar .navbar-nav>li>a{
@@ -25,24 +27,24 @@ body {
   transition: all 150ms linear;
 }
 .navbar .navbar-nav>li>a:hover{
-  color: #5BD30B;
+  color: var(--lightGreen);
 }
 
 .jumbotron{
-  background-color: #15C215;
+  background-color: var(--normalGreen);
   padding: 24px 0;
   margin-bottom: 0px;
 }
 
 .jumbotron h1{
-  color: #772F9B;
+  color: var(--normalPurple);
   color: white;
   margin-top: 0;
   text-shadow: 0px 0px 7px rgba(0,0,0,0.5);
   text-align: center;
 }
 .jumbotron h1 small{
-  color: #772F9B;
+  color: var(--normalPurple);
   color: #FFF0FE;
   text-shadow: 0px 0px 4px rgba(0,0,0,0.5);
 }
@@ -59,7 +61,7 @@ body {
 }
 
 .section .well{
-  background-color: #772F9B;
+  background-color: var(--normalPurple);
   border: none;
   color: white;
 }

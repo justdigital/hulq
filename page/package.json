@@ -1,0 +1,17 @@
+{
+  "name": "hulqpage",
+  "version": "1.0.0",
+  "description": "The github page for hulq",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cssnano": "^2.1.1",
+    "cssnext": "^1.8.3",
+    "gulp": "^3.9.0",
+    "gulp-postcss": "^5.1.10"
+  }
+}

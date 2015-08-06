@@ -15,6 +15,6 @@ case "$1" in
   "help" )
     node ./help.js ;;
 # TODO
-# "deploy" )
-#   node ./deploy.js default_frontend_stylesheet;;
+ "deploy" )
+   node ./deploy.js default_frontend_stylesheet;;
 esac

@@ -68,14 +68,14 @@ var getCurrent = function(authToken, frontend, stylesheet, language, cb){
       }
     }
   );
-}
+};
 
 var upload = function(authToken, frontend, stylesheet, language, cb){
   language = language || "en";
   var frontendHost = cfg.gsaProtocol + '://' + cfg.gsaHost + ':' + cfg.gsaPanelPort + "/feeds/outputFormat/" + frontend;
   var frontendContent = fs.readFileSync(cfg.xsltBuildPath + "/" + stylesheet  + ".xslt", "utf-8");
-  /*
   frontendContent = frontendContent
+  /*
     // Transforms current entities in hulq format so they get parsed later
     .replace(/&apos;/g, "((HLQapos))")
     .replace(/&quot;/g, '((HLQquot))')
@@ -88,8 +88,9 @@ var upload = function(authToken, frontend, stylesheet, language, cb){
     .replace(/</g, '&lt;')
     .replace(/>/g, '&gt;')
     .replace(/"/g, '&quot;')
-    .replace(/'/g, '&apos;')
+    .replace(/'/g, '&apos;');
 
+  /*
     // Converts hulq format entities to CDATA encapsulated entities
     .replace(/\(\(HLQamp\)\)/g,     '<![CDATA[&]]>')
     .replace(/\(\(HLQlt\)\)/g,      '<![CDATA[<]]>')
@@ -98,15 +99,12 @@ var upload = function(authToken, frontend, stylesheet, language, cb){
     .replace(/\(\(HLQapos\)\)/g,    "<![CDATA[']]>");
 
   */
-  console.log(frontendContent);
-
   var requestData = 
     "<?xml version='1.0' encoding='UTF-8'?>" +
       "<entry xmlns='http://www.w3.org/2005/Atom' " +
       "xmlns:gsa='http://schemas.google.com/gsa/2007'>" +
         "<id>" + frontendHost + "</id>" +
         "<gsa:content name='entryID'>" + frontend + "</gsa:content>" +
-        "<gsa:content name='language'>" + language + "</gsa:content>" +
         "<gsa:content name='styleSheetContent'>" +
           frontendContent + 
         "</gsa:content>" +

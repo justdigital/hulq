@@ -37,7 +37,7 @@ Copy the generated files to the XSLT workspace. CAUTION: This will override the 
 $ ./hulq prepare
 ```
 
-Now it is your turn: You can edit the xslt files (workspace/**/*.xslt)
+Now it is your turn: You can edit the xslt files (xslt/partials/*.xslt)
 
 ## HulQ Commands ##
 The core HulQ commands are:

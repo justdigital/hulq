@@ -18,6 +18,10 @@ module.exports = {
 
   cssBuildPath:     './assets/build/css',
 
+  generatedPath:    './generated',
+
+  generatedPartialsPath:     './generated/partials',
+
   xsltPath:         './xslt',
 
   xsltPartialsPath: './xslt/partials',

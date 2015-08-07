@@ -3,9 +3,9 @@ case "$1" in
   "smash" )
     node ./smash.js $2;;
   "prepare" )
-    ./prepare.sh ;;
+    node prepare.js ;;
   "destroy" )
-    ./destroy.sh ;;
+    node destroy.js ;;
   "lookup" )
     node ./lookup.js $2;;
   "recover" )
@@ -14,7 +14,6 @@ case "$1" in
     gulp watch ;;
   "help" )
     node ./help.js ;;
-# TODO
- "deploy" )
-   node ./deploy.js default_frontend_stylesheet;;
+  "deploy" )
+    node ./deploy.js $2;;
 esac

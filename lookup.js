@@ -29,7 +29,7 @@ function addMatch(file, line, lineNum){
 wrench.readdirRecursive(cfg.xsltPath, function(error, curFiles) {
   for (var f in curFiles){
     var file = curFiles[f];
-    if (file.match(".xslt") && !file.match("build")){
+    if (file.match(".xslt")){
       (function(lineNum, file){
         new lazy(fs.createReadStream(cfg.xsltPath + "/" + file))
           .lines

@@ -69,6 +69,6 @@ helpTable.addLine(["destroy", "Removes the generated files"]);
 helpTable.addLine(["lookup search_term", "Finds a term inside any xslt file on the workspace"]);
 helpTable.addLine(["recover", "Generates the XSLT output that can be uploaded"]);
 helpTable.addLine(["watch", "Starts watching project files and automatically runs recover on file change"]);
-helpTable.addLine(["deploy*", "(TODO) Sends the generated file to the server"]);
+helpTable.addLine(["deploy", "Sends the generated file to the server"]);
 helpTable.addLine(["help", "Shows this help"]);
 helpTable.render();

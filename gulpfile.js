@@ -45,7 +45,7 @@ gulp.task('js', function(cb){
 
 // XSLT Building
 gulp.task('xslt', ['js', 'css'], function() {
-  gulp.src('xslt/template.xslt')
+  gulp.src(cfg.xsltPath + '/template.xslt')
   .pipe(xslttemplate({
     partialsPath: cfg.xsltPartialsPath,
     replaces: {

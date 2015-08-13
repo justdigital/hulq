@@ -1,5 +1,15 @@
 module.exports = {
   /*
+   * Default frontend name
+   */
+  defaultFrontendName: 'default_frontend',
+
+  /*
+   * Default frontend language
+   */
+  defaultFrontendLanguage: 'lang_en',
+
+  /*
    * GSA Panel protocol: http or https
    * Only needed for the deploy function
    */

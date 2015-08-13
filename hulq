@@ -15,5 +15,5 @@ case "$1" in
   "help" )
     node ./help.js ;;
   "deploy" )
-    node ./deploy.js $2;;
+    phantomjs --web-security=false --ignore-ssl-errors=true --cookies-file=cookies.txt deploy.js $2;;
 esac

@@ -6,9 +6,10 @@ HULQ - Simple framework for XSLT development
 
 Before you start, make sure you have these things installed:
 
-1. nodejs
-2. npm
-2. gulp (sudo npm install gulp -g)
+1. [nodejs](https://nodejs.org/)
+2. [npm](https://www.npmjs.com/)
+3. [gulp](http://gulpjs.com/) (sudo npm install gulp -g)
+4. [phantomjs](http://phantomjs.org/)
 
 ## Installation / Use ##
 
@@ -44,10 +45,11 @@ The core HulQ commands are:
 1. smash
 2. prepare
 3. recover
-3. watch
-4. lookup
-5. destroy
-6. help
+4. deploy
+5. watch
+6. lookup
+7. destroy
+8. help
 
 You can see their description by using ./hulq help
 

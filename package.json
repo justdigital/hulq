@@ -1,13 +1,24 @@
 {
-  "name": "xslt-framework",
-  "version": "1.0.0",
-  "description": "XSLT template generator",
+  "name": "hulq",
+  "version": "0.6.0",
+  "description": "XSLT workspage manager. Generates templates, breaks this into files",
   "main": "app.js",
+  "keywords": [
+    "xslt",
+    "smash",
+    "framework",
+    "gsa",
+    "google search appliance"
+  ],
+  "main": "./lib/hulq",
+  "repository": {
+    "url": "https://github.com/justdigital/hulq"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Lucas Chain",
-  "license": "ISC",
+  "license": "Apache2",
   "dependencies": {
     "chalk": "^1.1.0",
     "gulp": "^3.9.0",
@@ -25,5 +36,8 @@
     "request": "^2.60.0",
     "string": "^3.3.0",
     "wrench": "^1.5.8"
+  },
+  "engines": {
+    "node": "*"
   }
 }

@@ -3,4 +3,4 @@ node_modules/
 *.swo
 **/*.swp
 **/*.swo
-cookies.txt
+npm-debug.log

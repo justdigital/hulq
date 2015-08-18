@@ -1,6 +1,6 @@
 {
   "name": "hulq",
-  "version": "0.6.0",
+  "version": "0.6.1",
   "description": "XSLT workspage manager. Generates templates, breaks this into files",
   "main": "app.js",
   "keywords": [
@@ -16,6 +16,9 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "bin":{
+    "hulq": "./lib/hulq"
   },
   "author": "Lucas Chain",
   "license": "Apache2",

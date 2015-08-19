@@ -13,12 +13,11 @@ Before you start, make sure you have these things installed:
 
 ## Installation / Use ##
 
-Set-up repo
-
 ```
 $ sudo npm install hulq -g #it needs to be available globally
 $ hulq begin your_template.xslt
 $ cd your_project
+```
 
 Now it is your turn: You can edit the xslt files (**workspace/your_template.xslt** and **workspace/partials/*.xslt**)
 
@@ -41,6 +40,7 @@ You can see their description by using ./hulq help
 You can change this file to configure how your output will be generated.
 The gulp-xslttemplate documentation is available [here](tasks/README.md)
 
+
 ```
 replaces: {
   jsmin: {
@@ -55,10 +55,10 @@ replaces: {
 ```
 
 Create the brand new xslt file with everything together:
+
 ```
 $ ./hulq recover
 ```
-
 
 ## Contributing ##
 

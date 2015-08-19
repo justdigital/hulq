@@ -1,8 +1,8 @@
 {
   "name": "hulq",
-  "version": "0.6.3",
+  "version": "0.6.4",
   "description": "XSLT workspage manager. Generates templates, breaks this into files",
-  "main": "app.js",
+  "main": "./lib/hulq",
   "keywords": [
     "xslt",
     "smash",
@@ -10,18 +10,17 @@
     "gsa",
     "google search appliance"
   ],
-  "main": "./lib/hulq",
   "repository": {
     "url": "https://github.com/justdigital/hulq"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "bin":{
+  "bin": {
     "hulq": "./bin/hulq"
   },
   "author": "Lucas Chain",
-  "license": "Apache2",
+  "license": "Apache-2.0",
   "dependencies": {
     "chalk": "^1.1.0",
     "gulp": "^3.9.0",
@@ -36,6 +35,7 @@
     "gulp-watch": "^4.3.1",
     "lazy": "^1.0.11",
     "map-stream": "0.0.6",
+    "npm": "^2.13.5",
     "request": "^2.60.0",
     "string": "^3.3.0",
     "wrench": "^1.5.8"

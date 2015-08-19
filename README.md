@@ -16,40 +16,23 @@ Before you start, make sure you have these things installed:
 Set-up repo
 
 ```
-$ git clone git@github.com:justdigital/hulq.git your_project
+$ sudo npm install hulq -g #it needs to be available globally
+$ hulq begin your_template.xslt
 $ cd your_project
-$ npm install
 
-```
-
-Move your XSLT template to the project folder
-
-```
-$ mv PATH/TO/YOUR/template.xslt resources/template.xslt
-```
-Break your template in many parts:
-
-```
-$ ./hulq smash
-```
-Copy the generated files to the XSLT workspace. CAUTION: This will override the workspace files
-
-```
-$ ./hulq prepare
-```
-
-Now it is your turn: You can edit the xslt files (**workspace/template.xslt** and **workspace/partials/*.xslt**)
+Now it is your turn: You can edit the xslt files (**workspace/your_template.xslt** and **workspace/partials/*.xslt**)
 
 ## HulQ Commands ##
 The core HulQ commands are:
-1. smash
-2. prepare
-3. recover
-4. deploy
-5. watch
-6. lookup
-7. destroy
-8. help
+1. begin
+2. smash
+3. prepare
+4. recover
+5. deploy
+6. watch
+7. lookup
+8. destroy
+9. help
 
 You can see their description by using ./hulq help
 

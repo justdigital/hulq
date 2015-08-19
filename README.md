@@ -57,7 +57,8 @@ replaces: {
 Create the brand new xslt file with everything together:
 
 ```
-$ hulq recover
+$ hulq recover # OR
+$ hulq watch # to watch the files and recover when edited
 ```
 
 ## Contributing ##

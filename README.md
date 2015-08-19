@@ -9,7 +9,7 @@ Before you start, make sure you have these things installed:
 1. [nodejs](https://nodejs.org/)
 2. [npm](https://www.npmjs.com/)
 3. [gulp](http://gulpjs.com/) (sudo npm install gulp -g)
-4. [phantomjs](http://phantomjs.org/)
+4. [phantomjs](http://phantomjs.org/) (for deployment only)
 
 ## Installation / Use ##
 
@@ -22,18 +22,18 @@ $ cd your_project
 Now it is your turn: You can edit the xslt files (**workspace/your_template.xslt** and **workspace/partials/*.xslt**)
 
 ## HulQ Commands ##
-The core HulQ commands are:
-1. begin
-2. smash
-3. prepare
-4. recover
-5. deploy
-6. watch
-7. lookup
-8. destroy
-9. help
 
-You can see their description by using ./hulq help
+  1. begin
+  2. smash
+  3. prepare
+  4. recover
+  5. deploy
+  6. watch
+  7. lookup
+  8. destroy
+  9. help
+
+You can see their description by using **hulq help**
 
 ## The Gulpfile ##
 
@@ -57,7 +57,7 @@ replaces: {
 Create the brand new xslt file with everything together:
 
 ```
-$ ./hulq recover
+$ hulq recover
 ```
 
 ## Contributing ##

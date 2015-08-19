@@ -32,43 +32,27 @@
     <div class="well">
       <ol>
         <li class="getting-started-step">
-          <span class="get-started-command">git clone https://google.com/hulq.git your_project</span>
-          <span class="get-started-comment">#Clone the repo and choose a name</span>
+          <span class="get-started-command">sudo npm install hulq -g</span>
+          <span class="get-started-comment">#It needs to be globally available</span>
         </li>
         <li class="getting-started-step">
           <span class="get-started-command">cd your_project</span>
           <span class="get-started-comment">#Go into your created folder</span>
         </li>
         <li class="getting-started-step">
-          <span class="get-started-command">npm install</span>
-          <span class="get-started-comment">#Installs the NPM dependencies</span>
-        </li>
-        <li class="getting-started-step">
-          <span class="get-started-command">sudo chmod +x ./hulq</span>
-          <span class="get-started-comment">#Give exec permission on the hulq file</span>
-        </li>
-        <li class="getting-started-step">
-          <span class="get-started-command">mv /path/to/my_xslt_frontend_file.xslt resources/</span>
-          <span class="get-started-comment">#Move your current template file to the resources folder so it can be smashed</span>
-        </li>
-        <li class="getting-started-step">
-          <span class="get-started-command">./hulq smash my_xslt_frontend_file</span>
-          <span class="get-started-comment">#Break your template in many parts (you don't have to specify the file extension)</span>
-        </li>
-        <li class="getting-started-step">
-          <span class="get-started-command">./hulq prepare</span>
-          <span class="get-started-comment">#Move your XSLT template to the project folder (overwrites previously preparated files)</span>
+          <span class="get-started-command">hulq begin your_template.xslt</span>
+          <span class="get-started-comment">#Create a new hulq project based on your_template.xslt file (you can omit the extension)</span>
         </li>
         <li class="getting-started-step">
           <span class="get-started-comment">#Now it is your turn: You can edit the xslt files (workspace/**/*.xslt)</span>
         </li>
         <li class="getting-started-step">
-          <span class="get-started-command">./hulq recover</span>
-          <span class="get-started-comment">#Create the brand new xslt file with everything together</span>
+          <span class="get-started-command">hulq recover</span>
+          <span class="get-started-comment">#Create the brand new xslt file with everything together.</span>
         </li>
         <li class="getting-started-step">
-          <span class="get-started-command">./hulq deploy*</span>
-          <span class="get-started-comment">#*Comming soon: Deploy your recovered xslt to the GSA control panel</span>
+          <span class="get-started-command">hulq deploy</span>
+          <span class="get-started-comment">#Deploy your recovered xslt to the GSA control panel</span>
         </li>
       </ol>
     </div>

@@ -1,6 +1,6 @@
 {
   "name": "hulq",
-  "version": "0.6.2",
+  "version": "0.6.3",
   "description": "XSLT workspage manager. Generates templates, breaks this into files",
   "main": "app.js",
   "keywords": [

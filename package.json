@@ -18,7 +18,7 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "bin":{
-    "hulq": "./lib/hulq"
+    "hulq": "./bin/hulq"
   },
   "author": "Lucas Chain",
   "license": "Apache2",

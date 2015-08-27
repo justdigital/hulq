@@ -1,10 +1,9 @@
 var gulp = require('gulp');
-var postcss = require('gulp-watch');
 var cssnext = require('cssnext');
 var cssnano = require('cssnano');
+var postcss = require('gulp-postcss');
 
 gulp.task('css', function () {
-  var postcss = require('gulp-postcss');
   return gulp.src([
       'css/bootstrap.min.css',
       'css/hulq.min.css',

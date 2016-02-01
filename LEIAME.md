@@ -9,7 +9,7 @@ Antes de começar, se certifique de ter os itens abaixo instalados:
 1. [nodejs](https://nodejs.org/)
 2. [npm](https://www.npmjs.com/)
 3. [gulp](http://gulpjs.com/) (sudo npm install gulp -g)
-4. [phantomjs](http://phantomjs.org/) (for deployment only)
+4. [phantomjs](http://phantomjs.org/) (para deploy)
 
 ## Instalação / Uso ##
 

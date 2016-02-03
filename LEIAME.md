@@ -19,7 +19,7 @@ $ hulq begin seu_template.xslt
 $ cd seu_projeto
 ```
 
-Agora é com você: Você pode editar o arquivo xslt (**workspace/seu_template.xslt** e **workspace/partials/*.xslt**)
+Agora é com você: Edite o arquivo xslt (**workspace/seu_template.xslt** e **workspace/partials/*.xslt**)
 
 ## Comandos HulQ ##
 
@@ -64,11 +64,11 @@ $ hulq watch # para monitorar os arquivos e recuperá-los quando editados
 ## Contribuindo
 
 
-O sistema de contribuição do HulQ usa o GitHub para gerenciar os pull-requests. Então, basicamente, para contribuir, você irá fazer um [fork](https://help.github.com/articles/fork-a-repo/), exeutar o commit de suas alterações e submeter um pull-request baseado na issue criada por qualquer usuário GitHub. Seguem alguns passos mais detalhados:
+O sistema de contribuição do HulQ usa o GitHub para gerenciar os pull-requests. Então, basicamente, para contribuir, você irá fazer um [fork](https://help.github.com/articles/fork-a-repo/), executar o commit de suas alterações e submeter um pull-request baseado na issue criada por qualquer usuário GitHub. Seguem alguns passos mais detalhados:
 
 1. Faça um [fork](https://help.github.com/articles/fork-a-repo/) do projeto e configure o repositório.
 2. Crie uma nova branch para trabalhar: **git checkout -b nova_branch**
-3. Trabalhe no código e realize o commit de suas alterações. **ALERTA: Você deve realisar o commit de seus arquivos com quebra de linhas LF. [Leia mais aqui](https://help.github.com/articles/dealing-with-line-endings/)**
+3. Trabalhe no código e realize o commit de suas alterações. **ALERTA: Você deve realizar o commit de seus arquivos com quebra de linhas LF. [Leia mais aqui](https://help.github.com/articles/dealing-with-line-endings/)**
 4. Depois de ter certeza que seu código foi totalmente testado, você pode realizar seu push no repositório remoto: **git push origin nova_branch**
 5. Agora você deve criar um [pull-request](https://help.github.com/articles/creating-a-pull-request) com um título específico, uma boa descrição contendo **o número da issue** e um pedaço de documentação explicando o que você fez.
 6. Os contribuidores do código irão revisar as alterações agora, tenha em mente que é muito comum receber pedido de alteração de código, então, tente acompanhá-los ou discutir a importância do pedido de alteração para ter certeza que tudo foi feito da melhor maneira possível.

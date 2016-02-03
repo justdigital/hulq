@@ -58,6 +58,9 @@ a {
 .powered-by a,
 .hulq__info__list__item--git .block,
 .hulq__info__list__item--download .block,
+.hulq__info__list__item--clean-code,
+.hulq__info__list__item--code-fast,
+.hulq__info__list__item--working-colaborate,
 .arrow--down {
   transition: all .2s ease-out;
 }
@@ -67,6 +70,9 @@ a {
 .box,
 .hulq__info__list__item--download,
 .hulq__info__list__item--git,
+.hulq__info__list__item--clean-code,
+.hulq__info__list__item--code-fast,
+.hulq__info__list__item--working-colaborate,
 .box--centered {
   position: relative;
 }
@@ -134,6 +140,11 @@ a {
 .hulq__info__heading--small,
 .hulq__info__list__item--git .block,
 .hulq__info__list__item--download .block,
+.hulq__info__list__item--clean-code,
+.hulq__info__list__item--code-fast,
+.hulq__info__list__item--working-colaborate,
+.arrow-container__message,
+.comics-dialog span,
 a {
   font-family: 'komika_displayregular';
 }
@@ -196,6 +207,10 @@ a {
 .hulq__slogan,
 .hulq__info__list__item--git .block,
 .hulq__info__list__item--download .block,
+.hulq__info__list__item--clean-code,
+.hulq__info__list__item--code-fast,
+.hulq__info__list__item--working-colaborate,
+.arrow-container__message,
 a {
   color: #640f7b;
 }
@@ -291,14 +306,27 @@ code em {
   height: 70px;
   top: calc(50% - 35px);
   width: 70px;
+}
+
+.arrow--right,
+.arrow--left,
+.arrow-container__message {
   z-index: 10;
 }
 
+.arrow-container__message {
+  right: 70px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
 .logo,
+.arrow-container__message,
 .arrow--right,
 .arrow--left,
 .arrow--down,
-.menu__header {
+.menu__header,
+.comics-dialog {
   position: absolute;
 }
 
@@ -388,19 +416,28 @@ code,
 }
 
 .hulq__info__list__item--download .block,
-.hulq__info__list__item--git .block {
+.hulq__info__list__item--git .block,
+.hulq__info__list__item--clean-code .block,
+.hulq__info__list__item--code-fast .block,
+.hulq__info__list__item--working-colaborate .block {
   height: 130px;
 }
 
 .line:before,
 .line:after,
 .hulq__info__list__item--download .block,
-.hulq__info__list__item--git .block {
+.hulq__info__list__item--git .block,
+.hulq__info__list__item--clean-code .block,
+.hulq__info__list__item--code-fast .block,
+.hulq__info__list__item--working-colaborate .block {
   display: table;
 }
 
 .hulq__info__list__item--download span,
-.hulq__info__list__item--git span {
+.hulq__info__list__item--git span,
+.hulq__info__list__item--clean-code span,
+.hulq__info__list__item--code-fast span,
+.hulq__info__list__item--working-colaborate span {
   display: table-cell;
   vertical-align: bottom;
 }
@@ -413,8 +450,27 @@ code,
   background-image: url('../../images/hulq-git-repository.png');
 }
 
+.hulq__info__list__item--clean-code {
+  background-image: url('../../images/hulq-xslt-clean-code.png');
+}
+
+.hulq__info__list__item--clean-code {
+  background-image: url('../../images/hulq-xslt-clean-code.png');
+}
+
+.hulq__info__list__item--code-fast {
+  background-image: url('../../images/hulq-xslt-code-fast.png');
+}
+
+.hulq__info__list__item--working-colaborate {
+  background-image: url('../../images/hulq-xslt-working-colaborate.png');
+}
+
 .hulq__info__list__item--download,
-.hulq__info__list__item--git {
+.hulq__info__list__item--git,
+.hulq__info__list__item--clean-code,
+.hulq__info__list__item--code-fast,
+.hulq__info__list__item--working-colaborate {
   background-position: center;
   background-repeat: no-repeat;
   background-size: 80px;
@@ -426,7 +482,10 @@ code,
 .warning,
 .warning:before,
 .hulq__info__list__item--download,
-.hulq__info__list__item--git {
+.hulq__info__list__item--git,
+.hulq__info__list__item--clean-code,
+.hulq__info__list__item--code-fast,
+.hulq__info__list__item--working-colaborate {
   display: inline-block;
 }
 
@@ -440,6 +499,23 @@ code,
   opacity: 0;
   overflow: hidden;
   transition: opacity .2s ease-out;
+}
+
+.comics-dialog {
+  background-image: url('../../images/dialog.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  bottom: 48px;
+  height: 88px;
+  left: calc(50% + 6px);
+  text-align: center;
+  width: 116px;
+}
+
+.comics-dialog span {
+  position: relative;
+  top: 33%;
+  transform: translateY(-50%);
 }
 
 @media screen and (min-width: 320px) and (max-width: 600px) {

@@ -72,6 +72,12 @@ jQuery(document).ready(function ($) {
 
     if(currentSlide >= 2) {
       $('.arrow--left').removeClass('hidden');
+
+      var tourMessage = $('.arrow-container__message');
+
+      if(!tourMessage.hasClass('hidden')) {
+        $('.arrow-container__message').addClass('hidden');
+      }
     }
   });
 

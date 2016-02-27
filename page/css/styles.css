@@ -56,6 +56,7 @@ a {
 }
 .menu__header__list__item a,
 .powered-by a,
+.help-us a,
 .hulq__info__list__item--git .block,
 .hulq__info__list__item--download .block,
 .hulq__info__list__item--clean-code,
@@ -136,6 +137,7 @@ a {
 .whitebox,
 .warning,
 .powered-by,
+.help-us,
 .hulq__info__heading,
 .hulq__info__heading--small,
 .hulq__info__list__item--git .block,
@@ -228,9 +230,10 @@ a {
   margin-bottom: 0;
 }
 
-.powered-by {
-  margin: 0 20px 20px;
-  text-align: right;
+.powered-by,
+.help-us {
+  padding: 10px 0;
+  text-align: center;
 }
 
 pre {
@@ -389,8 +392,8 @@ code,
 }
 
 .hulq__info {
-  margin-top: 120px;
-  padding-bottom: 60px;
+  margin-top: 90px;
+  padding: 20px 0 60px 0;
 }
 
 .hulq__info__heading {
@@ -403,7 +406,6 @@ code,
   font-weight: normal;
   margin: 0 auto;
   max-width: 600px;
-  padding: 20px;
   text-align: center;
 }
 
@@ -491,7 +493,6 @@ code,
 
 .secondary {
   background-color: white;
-  margin-bottom: 22px;
 }
 
 .hidden {
@@ -601,6 +602,7 @@ code,
   }
 
   .hulq {
-    margin-top: 80px;
+    margin-top: 0;
+    padding: 0 20px;
   }
 }

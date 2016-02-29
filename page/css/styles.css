@@ -392,8 +392,7 @@ code,
 }
 
 .hulq__info {
-  margin-top: 90px;
-  padding: 20px 0 60px 0;
+  padding: 70px 0;
 }
 
 .hulq__info__heading {
@@ -492,6 +491,7 @@ code,
 }
 
 .secondary {
+  margin-top: 0;
   background-color: white;
 }
 
